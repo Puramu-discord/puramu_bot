@@ -1,0 +1,28 @@
+{
+  "name": "puramu_bot",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "Puramu",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^18.0.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.5",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "ts-node": "^10.9.2",
+    "typescript": "~6.0.0",
+    "typescript-eslint": "^8.71.1"
+  }
+}
