@@ -5,9 +5,12 @@
   "license": "MIT",
   "author": "Puramu",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node dist/index.js",
     "lint": "eslint src",
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
     "lint:fix": "eslint src --fix"
   },
   "dependencies": {
@@ -20,8 +23,10 @@
     "eslint": "^10.12.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.13.0",
+    "jiti": "^2.7.0",
     "prettier": "^3.9.10",
     "ts-node": "^10.9.2",
+    "tsx": "^4.23.15",
     "typescript": "~6.0.0",
     "typescript-eslint": "^8.71.1"
   }
