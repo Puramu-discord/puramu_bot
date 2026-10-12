@@ -7,11 +7,19 @@ import {
 } from "discord.js"
 import dotenv from "dotenv"
 import fs from "node:fs"
-import path from "node:path";
-import { pathToFileURL } from "node:url";
-import type { Command } from "./types.js";
+import path from "node:path"
+import http from "node:http"
+import { pathToFileURL } from "node:url"
+import type { Command } from "./types.js"
 
-dotenv.config();
+dotenv.config()
+
+http
+    .createServer((_req, res) => {
+        res.writeHead(200)
+        res.end("Server is Online.")
+    })
+    .listen(Number(process.env.PORT) || 8080)
 
 const client = new Client({
     intents: [GatewayIntentBits.Guilds],
